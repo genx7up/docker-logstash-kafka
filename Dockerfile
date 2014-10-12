@@ -20,5 +20,6 @@ RUN sed -E -i "s|LOGSTASH_VERSION\?=.*|LOGSTASH_VERSION?=$ENV_LOGSTASH_VERSION|"
 RUN make -C "/usr/local/logstash-kafka-0.6.2/" tarball
 
 # Define default run command.
+WORKDIR /opt
 ADD run.sh /run.sh
 CMD ["bash", "/run.sh"]
