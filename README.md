@@ -1,6 +1,13 @@
 docker-logstash-kafka
 =====================
 
+docker build --rm=true -t="logstash" .
+docker run -v /tmp:/data --name temp -it logstash bash
+
+==========================================================
+
+
+
 Docker build for deploying joekiller/logstash-kafka variant of logstash.
 
 ## Run Commands:
