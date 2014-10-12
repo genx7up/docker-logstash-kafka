@@ -19,5 +19,3 @@ RUN sed -E -i "s|LOGSTASH_VERSION\?=.*|LOGSTASH_VERSION?=$ENV_LOGSTASH_VERSION|"
 
 RUN make -C "/usr/local/logstash-kafka-0.6.2/" tarball
 
-ENTRYPOINT ["/usr/local/logstash-kafka-0.6.2/build/tarball/logstash-1.4.2/bin/logstash"]
-CMD ["agent", "-e ''"]
