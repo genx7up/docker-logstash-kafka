@@ -2,6 +2,7 @@ docker-logstash-kafka
 =====================
 
 docker build --rm=true -t="logstash" .
+
 docker run -v /tmp:/data --name temp -it logstash bash
 
 ==========================================================
